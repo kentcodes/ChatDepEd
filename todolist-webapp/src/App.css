@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f0f4f8, #d9e2ec);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Container */
+.todo-container {
+  background-color: #ffffff;
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.4s ease;
+}
+
+/* Title */
+.todo-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input and Button */
+.todo-container input {
+  padding: 10px;
+  width: 68%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s border-color ease;
+}
+
+.todo-container input:focus {
+  border-color: #007bff;
+}
+
+.todo-container button {
+  padding: 10px 16px;
+  margin-left: 8px;
+  border: none;
+  background-color: #007bff;
   color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-container button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
+/* Task List */
+.todo-container ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+/* Task Item */
+.todo-container li {
+  background-color: #f9f9f9;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.5s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Remove Button */
+.todo-container li button {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.todo-container li button:hover {
+  background-color: #d93636;
+}
+
+/* Animations */
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(10px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
