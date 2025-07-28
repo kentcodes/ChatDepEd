@@ -21,4 +21,4 @@ The app was created manually due to network restrictions. Dependencies are liste
 
 Note: Running `npm test` will fail until all dependencies, including `react-scripts`, are installed.
 
-The app contains skeleton components for phases outlined in the project description, including authentication, dashboard, data repository, and administrative reports.
+The app contains skeleton components for phases outlined in the project description, including authentication, dashboard, data repository, and administrative reports. The dashboard integrates placeholder tools for searching records, uploading documents, exporting data, viewing the audit log, and displaying notifications.
